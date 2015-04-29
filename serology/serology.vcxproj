@@ -60,10 +60,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\ELISAcost.cpp" />
+    <None Include="serologyPrices.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="serologyPrices.txt" />
+    <ClCompile Include="..\ELISAcost.cpp" />
+    <ClCompile Include="..\functions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
