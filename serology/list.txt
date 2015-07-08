@@ -1,0 +1,27 @@
+Cost_basic = 0.005242 + 0.5773 + 0.6172 + 0.5787 + 1.2 + 0.1617 + 0.1692 + 0.1906 + 2.134
+total: 5.633
+
+
+cost_equipment = 61.78 + 67.6 + 6.071 + 1.89 + 0.5469
+total: 137.9
+
+
+cost_short =  + 5.633 + 1038 + 19.16 + 6.025 + 25.92 + 58.45 + 137.9
+total: 1291
+
+
+cost_short7 =  + 5.633 + 1211 + 19.16 + 6.025 + 25.92 + 58.45 + 137.9
+total: 1464
+
+
+cost_long = 5.633 + 2941 + 19.16 + 6.025 + 25.92 + 70.14 + 137.9
+total: 3206
+
+Short 6 panel (half): 29.34
+Short 7 panel (half): 33.27
+Quarantine (half): 72.86
+
+Short 6 panel (full): 28.69
+Short 7 panel (full): 32.54
+Quarantine (full) 71.24
+

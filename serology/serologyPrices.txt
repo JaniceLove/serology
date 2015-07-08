@@ -1,12 +1,12 @@
-The cost of a short panel (6 plates) is: $ 1354
-The cost of a short panel (7 plates) is: $ 1527
-The cost of a quarantine panel is: $ 3268
+The cost of a short panel (6 plates) is: $ 1291
+The cost of a short panel (7 plates) is: $ 1464
+The cost of a quarantine panel is: $ 3206
 
-Short Panel (6 plates) cost (half plate) is: $ 56.4
-Short panel (7 plates) cost (half plate) is: $ 63.61
-Quarantine Panel cost (half plate) is: $ 136.2
+Short Panel (6 plates) cost (half plate) is: $ 29.34
+Short panel (7 plates) cost (half plate) is: $ 33.27
+Quarantine Panel cost (half plate) is: $ 72.86
 
-Short panel (6 plates) cost (full plate) is: $ 28.2
-Short panel (7 plates) cost (full plate) is: $ 31.81
-Quarantine Panel cost (full plate) is: $ 68.09
+Short panel (6 plates) cost (full plate) is: $ 28.69
+Short panel (7 plates) cost (full plate) is: $ 32.54
+Quarantine Panel cost (full plate) is: $ 71.24
 

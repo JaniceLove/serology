@@ -1,7 +1,7 @@
 //Program to determine costs of running ELISA testing.
 //Author: Janice Love
 //Date: October 15, 2014
-//Update: April 29, 2015
+//Update: July 8, 2015
 
 #include <fstream>
 #include <iostream>
@@ -26,7 +26,9 @@ double Qpanel = 17;
 int main ()
 {
 	ofstream myFile;
+	ofstream myFile2;
 	myFile.open("serologyPrices.txt");
+	myFile2.open("list.txt");
 
 //plates 
 	double short6_panel = plate * 6; //plate cost per run
@@ -56,30 +58,75 @@ int main ()
 	double laborQ = tech_time_Q ();	  
 //*********************************************************************
 	
-	 
+	 myFile2 << setprecision(4);
 	 double cost_basic =  nacl  + naoh
 		  + ha  + t + milk  + foam 
 		  + peroxide  + acid  + ABTS; //cost per run
 
+				myFile2 << "Cost_basic = " << nacl << " + " << naoh << " + "
+					<< ha << " + " << t << " + " << milk << " + " << foam << " + "
+					<< peroxide << " + " << acid << " + " << ABTS << endl;
+				myFile2 << "total: " << cost_basic << endl; 
+				myFile2 << endl;
+				myFile2 << endl;
+
 	 double cost_equipment = reader  + washer + incubate 
 		  + pipette + ph_meter; //cost per run
 
+				myFile2 << "cost_equipment = " << reader << " + " << washer
+					<< " + " << incubate << " + " << pipette << " + " << 
+					ph_meter << endl;
+				myFile2 << "total: " << cost_equipment << endl; 
+				myFile2 << endl;
+				myFile2 << endl;
+				
 	double cost_short = cost_basic + short6_panel + tips_fisher
 		 + a + b  + labor_short + cost_equipment; //cost per run
+				
+				myFile2 << "cost_short = " << " + " << cost_basic << " + " <<
+					short6_panel << " + " << tips_fisher << " + " << a << " + " <<
+					b << " + " << labor_short << " + " << cost_equipment << endl;
+				myFile2 << "total: " << cost_short << endl; 
+				myFile2 << endl;
+				myFile2 << endl;
 
 	 double cost_short7 = cost_basic + short7_panel + tips_fisher
 		 + a + b + labor_short + cost_equipment; //cost per run
+
+				myFile2 << "cost_short7 = " << " + " << cost_basic << " + " <<
+					short7_panel << " + " << tips_fisher << " + " << a << " + " <<
+					b << " + " << labor_short << " + " << cost_equipment << endl;
+				myFile2 << "total: " << cost_short7 << endl; 
+				myFile2 << endl;
+				myFile2 << endl;
 		  
 	 double cost_long = cost_basic + quarantine_plate + tips_fisher
 		 + a + b + laborQ + cost_equipment; //cost per run 
 
-	 double half_short6 = cost_short / 24;
-	 double half_short7 = cost_short7 / 24;
-	 double half_quarantine = cost_long / 24;
+				myFile2 << "cost_long = " << cost_basic << " + " << quarantine_plate
+					<< " + " <<  tips_fisher << " + " <<  a << " + " << b 
+					<< " + " <<  laborQ << " + " << cost_equipment << endl;
+				myFile2 << "total: " << cost_long << endl; 
+				myFile2 << endl;
+
+	 double half_short6 = (cost_short / 2 ) / 22;
+	 double half_short7 = (cost_short7 / 2 ) / 22;
+	 double half_quarantine = (cost_long / 2) / 22;
+		//divide by 2 to have the cost of only half the plate
 	 
-	 double full_short6 = cost_short / 48; 
-	 double full_short7 = cost_short7 /48;
-	 double full_quarantine = cost_long / 48;
+			myFile2 << "Short 6 panel (half): " << half_short6 << endl;
+			myFile2 << "Short 7 panel (half): " << half_short7 << endl;
+			myFile2 << "Quarantine (half): " << half_quarantine << endl;
+			myFile2 << endl;
+
+	 double full_short6 = cost_short / 45; 
+	 double full_short7 = cost_short7 /45;
+	 double full_quarantine = cost_long / 45;
+			
+			myFile2 << "Short 6 panel (full): " << full_short6 << endl;
+			myFile2 << "Short 7 panel (full): " << full_short7 << endl;
+			myFile2 << "Quarantine (full) " << full_quarantine << endl;
+			myFile2 << endl;
 
 	  myFile << setprecision(4);
 	  myFile << "The cost of a short panel (6 plates) is: $ " << cost_short << endl;

@@ -1,7 +1,7 @@
 //Functions for ELISA costs 
 //Author: Janice Love
 //Date: April 29, 2015
-//Update: April 29, 2015
+//Update: July 6, 2015
 
 
 #include "functions.h"
@@ -131,7 +131,7 @@ double plateReader ()
 
 	  double depreciation = cost / life; 
 	  double per_month = depreciation / 12;
-	  double per_run = per_month / 2; // runs per month 
+	  double per_run = per_month / 3; // runs per month 
 	  return per_run; 
 }
 
@@ -140,7 +140,7 @@ double plateWasher() //same as plate reader??
 	double cost = 19470; //BCM marketplace
 	double depreciation = cost / life;
 	double perMonth = depreciation / 12; 
-	double per_run = perMonth / 2; // runs per month 
+	double per_run = perMonth / 3; // runs per month 
 	return per_run;
 }
 
@@ -149,7 +149,7 @@ double incubator ()
 	double cost = 1748.56;
 	double depreciation = cost / life; 
 	double perMonth = depreciation / 12;
-	double perRun = perMonth / 2; //runs per month 
+	double perRun = perMonth / 3; //runs per month 
 	  //double incubator_costPerSample = incubator_perMonth / 
 		  //samples_per_month; 
 	return perRun;
@@ -160,7 +160,7 @@ double ePipette ()
 	double cost = 544.23; //BCM marketplace
 	double depreciation = cost / life;
 	double perMonth = depreciation / 12;
-	double costPerRun = perMonth / 2; 
+	double costPerRun = perMonth / 3; 
 	return costPerRun;
 }
 
@@ -169,7 +169,7 @@ double phMeter ()
 	double cost = 157.50; //from BCM marketplace
 	double depreciation = cost / life; 
 	double costPerMonth = depreciation / 12; 
-	double costPerRun = costPerMonth / 2; 
+	double costPerRun = costPerMonth / 3; 
 	return costPerRun;
 }
 
@@ -178,7 +178,7 @@ double tips ()
 	double cost = 127.74; //tips used only for serology, from BCM marketplace 
 	double no_of_tips = 1920; //tips per case
 	double tips_per_rack = 96; 
-	double tipsRun = 2 * tips_per_rack; //2 boxes used per run
+	double tipsRun = 3 * tips_per_rack; //2 boxes used per run
 	  
 	double costPerUnit = cost / no_of_tips; 
 	double costPerRun = costPerUnit * tipsRun; 
